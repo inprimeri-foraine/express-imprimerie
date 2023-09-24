@@ -1,0 +1,92 @@
+<meta http-equiv="refresh" content="0;url=http://localhost:3000/complete-login-register-form-with-email-verification-main/index.php">
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXPRESS IMPRIMERIE FORAINE</title>
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="buttons">
+        <button class="signInBtn active" onclick="animateToSignIn()">connecter</button>
+        <button class="signUpBtn" onclick="animateToSignUp()">S'inscrire</button>
+        <div class="indicator"></div>
+      </div>
+      <div class="forms">
+        <form class="signInForm">
+          <div class="contents">
+            <div class="inputBox">
+              <label for="username">EMAIL</label>
+              <input type="text" id="username" required />
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="inputBox passwordBox">
+              <label for="password">ENTRE TON MOTS DE PASSE</label>
+              <input type="password" id="password" required />
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="checkBox">
+              <input type="checkbox" id="show" />
+              <label for="show">AFFICHER LE MOTS DE PASSE</label>
+            </div>
+            <a href="#">Mot de passe oublié?</a>
+            <input class="submitBtn" type="submit" value="VALIDE"/>
+            <p>
+                Nouvel utilisateur? <span onclick="animateToSignUp()">S'inscrire maintenant.</span>
+            </p>
+          </div>
+        </form>
+        <form class="signUpForm">
+          <div class="contents">
+            <div class="inputBox">
+              <label for="email">ENTRE TON EMAIL</label>
+              <input type="email" id="email" required />
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <div class="inputBox">
+                <label for="tel">ENTRE NUMERO DE TELEPHONE </label>
+                <input type="tel" id="tel" required />
+                <i class="fa-solid fa-circle-xmark"></i>
+              </div>
+
+            <div class="inputBox passwordBox">
+              <label for="passWord">ENTRE TON MOTS DE PASSE</label>
+              <input type="password" id="passWord" required />
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="inputBox confirmPasswordBox">
+              <label for="confirmPassWord">CONFIRME MOTS DE PASSE</label>
+              <input type="password" id="confirmPassWord" required />
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="checkBox">
+              <input type="checkbox" id="show2" />
+              <label for="show2">AFFICHER LE MOTS DE PASSE</label>
+            </div>
+            <input class="submitBtn" type="submit" value="VALIDE" />
+            <p>
+            Déjà membre? <span onclick="animateToSignIn()">Se connecter</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="main.js"></script>
+  </body>
+</html>
